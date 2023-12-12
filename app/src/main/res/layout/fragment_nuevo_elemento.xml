@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".NuevoPokemonFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nombre"/>
+
+        <EditText
+            android:id="@+id/descripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Descripcion"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/tipo1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/tipos"/>
+
+        <Spinner
+            android:id="@+id/tipo2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/tipos"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/habilidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Habilidad ej.Justiciero"/>
+    <EditText
+        android:id="@+id/hp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Vida base"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/atq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ataque Base"/>
+
+        <EditText
+            android:id="@+id/def"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Defensa Base"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/sAtq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ataque Especial Base"/>
+
+        <EditText
+            android:id="@+id/sDef"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Defensa Especial Base"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/vel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Velocidad base"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Elige un movset"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/mov1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Slot 1 de movimiento"/>
+
+        <EditText
+            android:id="@+id/mov2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Slot 2 de movimiento"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/mov3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Slot 3 de movimiento"/>
+
+        <EditText
+            android:id="@+id/mov4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Slot 4 de movimiento"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/crear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CREAR"/>
+</LinearLayout>

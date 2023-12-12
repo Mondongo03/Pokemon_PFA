@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="tipos">
+        <item>Normal</item>
+        <item>Fuego</item>
+        <item>Agua</item>
+        <item>Electrico</item>
+        <item>Planta</item>
+        <item>Hielo</item>
+        <item>Lucha</item>
+        <item>Veneno</item>
+        <item>Tierra</item>
+        <item>Volador</item>
+        <item>Psiquico</item>
+        <item>Bicho</item>
+        <item>Roca</item>
+        <item>Fantasma</item>
+        <item>Dragon</item>
+        <item>Siniestro</item>
+        <item>Acero</item>
+        <item>Hada</item>
+    </string-array>
+
+</resources>
