@@ -50,7 +50,7 @@ public class MostrarPokemonFragment extends Fragment {
                     case "Planta":
                         binding.tipo1.setImageResource(R.drawable.planta);
                         break;
-                    case "Eléctrico":
+                    case "Electrico":
                         binding.tipo1.setImageResource(R.drawable.electrico);
                         break;
                     case "Hielo":
@@ -68,7 +68,7 @@ public class MostrarPokemonFragment extends Fragment {
                     case "Volador":
                         binding.tipo1.setImageResource(R.drawable.volador);
                         break;
-                    case "Psíquico":
+                    case "Psiquico":
                         binding.tipo1.setImageResource(R.drawable.psiquico);
                         break;
                     case "Bicho":
@@ -80,7 +80,7 @@ public class MostrarPokemonFragment extends Fragment {
                     case "Fantasma":
                         binding.tipo1.setImageResource(R.drawable.fantasma);
                         break;
-                    case "Dragón":
+                    case "Dragon":
                         binding.tipo1.setImageResource(R.drawable.dragon);
                         break;
                     case "Siniestro":
