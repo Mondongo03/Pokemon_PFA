@@ -33,4 +33,9 @@
         android:name="com.example.recyclerview.MostrarPokemonFragment"
         android:label="fragment_mostrar_elemento"
         tools:layout="@layout/fragment_mostrar_elemento" />
+    <fragment
+        android:id="@+id/eficaciasFragment"
+        android:name="com.example.recyclerview.EficaciasFragment"
+        android:label="fragment_eficacias"
+        tools:layout="@layout/fragment_eficacias" />
 </navigation>
