@@ -3,7 +3,6 @@ package com.example.recyclerview;
 import android.graphics.Color;
 import android.os.Bundle;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -13,20 +12,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bumptech.glide.Glide;
-import com.example.recyclerview.databinding.FragmentMostrarElementoBinding;
-
-import java.util.IllegalFormatCodePointException;
+import com.example.recyclerview.databinding.FragmentMostrarPokemonBinding;
 
 
 public class MostrarPokemonFragment extends Fragment {
-    private FragmentMostrarElementoBinding binding;
+    private FragmentMostrarPokemonBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return (binding = FragmentMostrarElementoBinding.inflate(inflater, container, false)).getRoot();
+        return (binding = FragmentMostrarPokemonBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -242,6 +238,63 @@ public class MostrarPokemonFragment extends Fragment {
                 }
                 else if (pokemon.vel > 199){
                     binding.vel.setTextColor(Color.rgb(88, 250, 172));
+                }
+                switch (pokemon.mov1){
+                    case "Danza Espada":
+                        binding.mov1.setImageResource(R.drawable.danza_espada);
+                        break;
+                    case "Esfera Aural":
+                        binding.mov1.setImageResource(R.drawable.esfera_aural);
+                        break;
+                    case "Pulso Umbrio":
+                        binding.mov1.setImageResource(R.drawable.pulso_umbrio);
+                        break;
+                    case "Sentencia":
+                        binding.mov1.setImageResource(R.drawable.sentencia);
+                        break;
+                }
+                switch (pokemon.mov2){
+                    case "Danza Espada":
+                        binding.mov2.setImageResource(R.drawable.danza_espada);
+                        break;
+                    case "Esfera Aural":
+                        binding.mov2.setImageResource(R.drawable.esfera_aural);
+                        break;
+                    case "Pulso Umbrio":
+                        binding.mov2.setImageResource(R.drawable.pulso_umbrio);
+                        break;
+                    case "Sentencia":
+                        binding.mov2.setImageResource(R.drawable.sentencia);
+                        break;
+                }
+
+                switch (pokemon.mov3){
+                    case "Danza Espada":
+                        binding.mov3.setImageResource(R.drawable.danza_espada);
+                        break;
+                    case "Esfera Aural":
+                        binding.mov3.setImageResource(R.drawable.esfera_aural);
+                        break;
+                    case "Pulso Umbrio":
+                        binding.mov3.setImageResource(R.drawable.pulso_umbrio);
+                        break;
+                    case "Sentencia":
+                        binding.mov3.setImageResource(R.drawable.sentencia);
+                        break;
+                }
+                switch (pokemon.mov4){
+                    case "Danza Espada":
+                        binding.mov4.setImageResource(R.drawable.danza_espada);
+                        break;
+                    case "Esfera Aural":
+                        binding.mov4.setImageResource(R.drawable.esfera_aural);
+                        break;
+                    case "Pulso Umbrio":
+                        binding.mov4.setImageResource(R.drawable.pulso_umbrio);
+                        break;
+                    case "Sentencia":
+                        binding.mov4.setImageResource(R.drawable.sentencia);
+                        break;
                 }
 
 

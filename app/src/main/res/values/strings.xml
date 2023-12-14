@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RecyclerView</string>
+    <string name="app_name">Pokemon</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -22,6 +22,13 @@
         <item>Siniestro</item>
         <item>Acero</item>
         <item>Hada</item>
+    </string-array>
+
+    <string-array name="mov">
+        <item>Danza Espada</item>
+        <item>Esfera Aural</item>
+        <item>Pulso Umbrio</item>
+        <item>Sentencia</item>
     </string-array>
 
 </resources>

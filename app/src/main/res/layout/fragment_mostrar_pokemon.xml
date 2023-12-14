@@ -17,7 +17,7 @@
             android:id="@+id/imagenMiniatura"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/pokeball"
+        android:src="@drawable/pokeball"
             android:layout_marginEnd="24dp"/>
 
         <TextView
@@ -49,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/LinearPadre"
         android:layout_below="@id/descripcion"
         android:layout_marginTop="2dp">
 
@@ -105,9 +106,9 @@
                 android:id="@+id/mov"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="Movimientos Génericos"
-                android:layout_marginBottom="4dp"/>
+                android:layout_marginBottom="4dp"
+                android:text="Movimientos"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -141,51 +142,40 @@
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_marginTop="440dp">
+        android:layout_height="220dp"
+        android:layout_below="@id/LinearPadre">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+            <ImageView
+                android:id="@+id/mov1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:id="@+id/mov2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:id="@+id/mov3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                />
+            <ImageView
+                android:id="@+id/mov4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
 
-            <TextView
-                android:id="@+id/textViewScroll1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Texto con scroll 1"
-                android:textSize="20sp"
-                android:layout_marginBottom="8dp"/>
-            <TextView
-                android:id="@+id/textViewScroll2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Texto con scroll 2"
-                android:textSize="20sp"
-                android:layout_marginBottom="8dp"/>
-            <TextView
-                android:id="@+id/textViewScroll3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Texto con scroll 3"
-                android:textSize="20sp"
-                android:layout_marginBottom="8dp"/>
-            <TextView
-                android:id="@+id/textViewScroll4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Texto con scroll4"
-                android:textSize="20sp"
-                android:layout_marginBottom="8dp"/>
-            <TextView
-                android:id="@+id/textViewScroll5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Texto con scroll 5"
-                android:textSize="20sp"
-                android:layout_marginBottom="8dp"/>
         </LinearLayout>
     </ScrollView>
+
 
 </RelativeLayout>
 

@@ -17,14 +17,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.recyclerview.databinding.FragmentRecyclerElementosBinding;
-import com.example.recyclerview.databinding.ViewholderElementoBinding;
+import com.example.recyclerview.databinding.FragmentRecyclerPokemonBinding;
+import com.example.recyclerview.databinding.ViewholderPokemonBinding;
 
 import java.util.List;
 
 public class RecyclerPokemonFragment extends Fragment {
 
-    private FragmentRecyclerElementosBinding binding;
+    private FragmentRecyclerPokemonBinding binding;
     protected PokemonViewModel pokemonViewModel;
     private NavController navController;
 
@@ -32,7 +32,7 @@ public class RecyclerPokemonFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return (binding = FragmentRecyclerElementosBinding.inflate(inflater, container, false)).getRoot();
+        return (binding = FragmentRecyclerPokemonBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -85,9 +85,9 @@ public class RecyclerPokemonFragment extends Fragment {
     }
 
     class ElementoViewHolder extends RecyclerView.ViewHolder {
-        private final ViewholderElementoBinding binding;
+        private final ViewholderPokemonBinding binding;
 
-        public ElementoViewHolder(ViewholderElementoBinding binding) {
+        public ElementoViewHolder(ViewholderPokemonBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
@@ -99,7 +99,7 @@ public class RecyclerPokemonFragment extends Fragment {
         @NonNull
         @Override
         public ElementoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ElementoViewHolder(ViewholderElementoBinding.inflate(getLayoutInflater(), parent, false));
+            return new ElementoViewHolder(ViewholderPokemonBinding.inflate(getLayoutInflater(), parent, false));
         }
 
         @Override

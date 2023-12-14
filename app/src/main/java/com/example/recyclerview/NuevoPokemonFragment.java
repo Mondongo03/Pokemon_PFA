@@ -13,17 +13,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.recyclerview.databinding.FragmentNuevoElementoBinding;
+import com.example.recyclerview.databinding.FragmentNuevoPokemonBinding;
 
 public class NuevoPokemonFragment extends Fragment {
 
-    private FragmentNuevoElementoBinding binding;
+    private FragmentNuevoPokemonBinding binding;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return (binding = FragmentNuevoElementoBinding.inflate(inflater, container, false)).getRoot();
+        return (binding = FragmentNuevoPokemonBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
@@ -45,10 +44,10 @@ public class NuevoPokemonFragment extends Fragment {
                 int sAtq = Integer.parseInt(binding.sAtq.getText().toString());
                 int sDef = Integer.parseInt(binding.sDef.getText().toString());
                 int vel = Integer.parseInt(binding.vel.getText().toString());
-                String mov1 = binding.mov1.getText().toString();
-                String mov2 = binding.mov2.getText().toString();
-                String mov3 = binding.mov3.getText().toString();
-                String mov4 = binding.mov4.getText().toString();
+                String mov1 = binding.mov1.getSelectedItem().toString();
+                String mov2 = binding.mov2.getSelectedItem().toString();
+                String mov3 = binding.mov3.getSelectedItem().toString();
+                String mov4 = binding.mov4.getSelectedItem().toString();
 
                 Pokemon nuevoPokemon = new Pokemon(titulo, descripcion, tipo1, tipo2, hp, atq, def, sAtq, sDef, vel, mov1, mov2, mov3, mov4, habilidad);
 

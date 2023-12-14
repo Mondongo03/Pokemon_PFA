@@ -9,12 +9,12 @@
         android:id="@+id/recyclerElementosFragment"
         android:name="com.example.recyclerview.RecyclerPokemonFragment"
         android:label="fragment_recycler_elementos"
-        tools:layout="@layout/fragment_recycler_elementos" />
+        tools:layout="@layout/fragment_recycler_pokemon" />
     <fragment
         android:id="@+id/recyclerBuscarFragment"
         android:name="com.example.recyclerview.RecyclerBusquedaFragment"
         android:label="RecyclerBuscarFragment"
-        tools:layout="@layout/fragment_recycler_elementos" />
+        tools:layout="@layout/fragment_recycler_pokemon" />
 
     <action
         android:id="@+id/action_mostrarElementoFragment"
@@ -27,12 +27,12 @@
         android:id="@+id/nuevoElementoFragment"
         android:name="com.example.recyclerview.NuevoPokemonFragment"
         android:label="fragment_nuevo_elementok"
-        tools:layout="@layout/fragment_nuevo_elemento" />
+        tools:layout="@layout/fragment_nuevo_pokemon" />
     <fragment
         android:id="@+id/mostrarElementoFragment"
         android:name="com.example.recyclerview.MostrarPokemonFragment"
         android:label="fragment_mostrar_elemento"
-        tools:layout="@layout/fragment_mostrar_elemento" />
+        tools:layout="@layout/fragment_mostrar_pokemon" />
     <fragment
         android:id="@+id/eficaciasFragment"
         android:name="com.example.recyclerview.EficaciasFragment"
