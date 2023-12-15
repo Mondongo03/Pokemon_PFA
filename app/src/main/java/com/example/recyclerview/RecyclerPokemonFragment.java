@@ -49,13 +49,13 @@ public class RecyclerPokemonFragment extends Fragment {
             }
         });
 
-        ElementosAdapter elementosAdapter = new ElementosAdapter();
-        binding.recyclerView.setAdapter(elementosAdapter);
+        PokemonAdapter pokemonAdapter = new PokemonAdapter();
+        binding.recyclerView.setAdapter(pokemonAdapter);
 
-        obtenerElementos().observe(getViewLifecycleOwner(), new Observer<List<Pokemon>>() {
+        obtenerPokemon().observe(getViewLifecycleOwner(), new Observer<List<Pokemon>>() {
             @Override
             public void onChanged(List<Pokemon> pokemons) {
-                elementosAdapter.establecerLista(pokemons);
+                pokemonAdapter.establecerLista(pokemons);
             }
         });
 
@@ -71,7 +71,7 @@ public class RecyclerPokemonFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int posicion = viewHolder.getAdapterPosition();
-                Pokemon pokemon = elementosAdapter.obtenerElemento(posicion);
+                Pokemon pokemon = pokemonAdapter.obtenerPokemon(posicion);
                 pokemonViewModel.eliminar(pokemon);
 
             }
@@ -80,30 +80,30 @@ public class RecyclerPokemonFragment extends Fragment {
 
     }
 
-    LiveData<List<Pokemon>> obtenerElementos(){
+    LiveData<List<Pokemon>> obtenerPokemon(){
         return pokemonViewModel.obtener();
     }
 
-    class ElementoViewHolder extends RecyclerView.ViewHolder {
+    class PokemonViewHolder extends RecyclerView.ViewHolder {
         private final ViewholderPokemonBinding binding;
 
-        public ElementoViewHolder(ViewholderPokemonBinding binding) {
+        public PokemonViewHolder(ViewholderPokemonBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
     }
-    class ElementosAdapter extends RecyclerView.Adapter<ElementoViewHolder> {
+    class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
 
         List<Pokemon> pokemons;
 
         @NonNull
         @Override
-        public ElementoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ElementoViewHolder(ViewholderPokemonBinding.inflate(getLayoutInflater(), parent, false));
+        public PokemonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new PokemonViewHolder(ViewholderPokemonBinding.inflate(getLayoutInflater(), parent, false));
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ElementoViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull PokemonViewHolder holder, int position) {
 
             Pokemon pokemon = pokemons.get(position);
 
@@ -127,7 +127,7 @@ public class RecyclerPokemonFragment extends Fragment {
             this.pokemons = pokemons;
             notifyDataSetChanged();
         }
-        public Pokemon obtenerElemento(int posicion){
+        public Pokemon obtenerPokemon(int posicion){
             return pokemons.get(posicion);
         }
     }

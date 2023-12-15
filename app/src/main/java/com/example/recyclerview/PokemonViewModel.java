@@ -46,10 +46,6 @@ public class PokemonViewModel extends AndroidViewModel {
         pokemonRepositorio.eliminar(pokemon);
     }
 
-    void actualizar(Pokemon pokemon){
-        pokemonRepositorio.actualizar(pokemon);
-    }
-
     void seleccionar(Pokemon pokemon){
         elementoSeleccionado.setValue(pokemon);
     }

@@ -13,26 +13,26 @@ public class PokemonRepositorio {
 
     Executor executor = Executors.newSingleThreadExecutor();
 
-    PokemonBaseDeDatos.ElementosDao elementosDao;
+    PokemonBaseDeDatos.ElementosDao pokemonsDao;
 
     PokemonRepositorio(Application application){
-        elementosDao = PokemonBaseDeDatos.obtenerInstancia(application).obtenerElementosDao();
+        pokemonsDao = PokemonBaseDeDatos.obtenerInstancia(application).obtenerElementosDao();
 
 
     }
     LiveData<List<Pokemon>> obtener(){
-        return elementosDao.obtener();
+        return pokemonsDao.obtener();
     }
 
     LiveData<List<Pokemon>> buscar(String t) {
-        return elementosDao.buscar(t);
+        return pokemonsDao.buscar(t);
     }
 
     void insertar(Pokemon pokemon){
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                elementosDao.insertar(pokemon);
+                pokemonsDao.insertar(pokemon);
             }
         });
     }
@@ -41,17 +41,7 @@ public class PokemonRepositorio {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                elementosDao.eliminar(pokemon);
-            }
-        });
-    }
-
-    public void actualizar(Pokemon pokemon) {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-
-                elementosDao.actualizar(pokemon);
+                pokemonsDao.eliminar(pokemon);
             }
         });
     }

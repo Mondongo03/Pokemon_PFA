@@ -33,9 +33,6 @@ public abstract class PokemonBaseDeDatos extends RoomDatabase {
         @Insert
         void insertar(Pokemon pokemon);
 
-        @Update
-        void actualizar(Pokemon pokemon);
-
         @Delete
         void eliminar(Pokemon pokemon);
 
